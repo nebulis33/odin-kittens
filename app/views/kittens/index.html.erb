@@ -1,0 +1,9 @@
+Hello, welcome to Kitten builder.
+
+Here are all the kittens:
+<br>
+<ul>
+    <% @kittens.each do |k| %>
+        <li><%= k.name %> | <%= link_to "Edit", edit_kitten_path(k.id) %> | <%= link_to 'Delete', k, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    <% end %>
+</ul>
